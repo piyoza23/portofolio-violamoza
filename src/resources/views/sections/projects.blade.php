@@ -23,72 +23,29 @@
 @foreach($projects as $project)
 
     <div
-    class="
-    grid
-    md:grid-cols-2
-    gap-16
-    items-center
-    bg-white
-    rounded-[40px]
-    p-8
-    "
+        class="
+            bg-white
+            rounded-[40px]
+            p-10
+            mb-10
+        "
     >
 
-    @if($loop->odd)
-
-    <div>
-
-        <img
-            src="{{ Storage::url($project->image) }}"
-            class="rounded-[30px]"
-        >
-
-    </div>
-
-    <div>
+        <span class="text-[#B08A8E]">
+            0{{ $loop->iteration }}
+        </span>
 
         <h3
-            class="font-serif text-4xl text-[#5b4040]"
+            class="font-serif text-4xl text-[#5b4040] mt-4"
         >
             {{ $project->title }}
         </h3>
 
         <p
-            class="mt-8 text-gray-500 leading-8"
+            class="mt-8 text-gray-500 leading-8 max-w-2xl"
         >
             {{ $project->description }}
         </p>
-
-    </div>
-
-    @else
-
-    <div>
-
-        <h3
-            class="font-serif text-4xl text-[#5b4040]"
-        >
-            {{ $project->title }}
-        </h3>
-
-        <p
-            class="mt-8 text-gray-500 leading-8"
-        >
-            {{ $project->description }}
-        </p>
-
-    </div>
-
-    <div>
-
-        <img
-            src="{{ Storage::url($project->image) }}"
-            class="rounded-[30px]"
-        >
-
-    </div>
-
-    @endif
 
     </div>
 

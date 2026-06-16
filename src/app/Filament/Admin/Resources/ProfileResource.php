@@ -26,6 +26,7 @@ class ProfileResource extends Resource
 
                 Forms\Components\FileUpload::make('photo')
                     ->image()
+                    ->disk('public')
                     ->directory('profile'),
 
                 Forms\Components\TextInput::make('name')
